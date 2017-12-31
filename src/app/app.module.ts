@@ -4,12 +4,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/Header/Header.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { CoursesComponent } from './Components/Courses/courses.component'
 import { CourseListComponent } from './Components/Courses/course-list.component';
 import { HomeComponent } from './Components/home.component'
 import { DataServiceService } from './Services/data-service.service';
-import { CourseDetailsComponent } from './Components/Courses/course-details.component'
+import { CourseDetailsComponent } from './Components/Courses/course-details.component';
+import { CoursesHomeComponent } from './Components/Courses/courses-home.component'
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CourseDetailsComponent } from './Components/Courses/course-details.comp
     CoursesComponent,
     CourseListComponent,
     HomeComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    CoursesHomeComponent
   ],
   imports: [
     NgbModule.forRoot(),

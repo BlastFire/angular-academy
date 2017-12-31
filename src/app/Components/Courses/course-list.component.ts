@@ -22,7 +22,7 @@ export class CourseListComponent implements OnInit {
   }
 
   gotoCourseDetails(id: string) {
-    this.router.navigate(['/course', id])
+    this.router.navigate(['/courses', id])
   }
 
 }
