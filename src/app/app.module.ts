@@ -10,7 +10,8 @@ import { CourseListComponent } from './Components/Courses/course-list.component'
 import { HomeComponent } from './Components/home.component'
 import { DataServiceService } from './Services/data-service.service';
 import { CourseDetailsComponent } from './Components/Courses/course-details.component';
-import { CoursesHomeComponent } from './Components/Courses/courses-home.component'
+import { CoursesHomeComponent } from './Components/Courses/courses-home.component';
+import { CoursesAddComponent } from './Components/Courses/courses-add.component'
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CoursesHomeComponent } from './Components/Courses/courses-home.componen
     CourseListComponent,
     HomeComponent,
     CourseDetailsComponent,
-    CoursesHomeComponent
+    CoursesHomeComponent,
+    CoursesAddComponent
   ],
   imports: [
     NgbModule.forRoot(),

@@ -1,3 +1,22 @@
-<p>
-  {{course.name}}
-</p>
+<div *ngIf="course" class="card" style="width: 18rem;">
+  <div class="card-header">
+    {{course.name}}
+  </div>
+  <img class="card-img-top" src="{{course.image}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card teacher name</h5>
+    <p class="card-text">{{course.teacherName}}</p>
+    <h5 class="card-title">Card teacher email</h5>
+    <p class="card-text">{{course.teacherEmail}}</p>
+    <h5 class="card-title">Language</h5>
+    <p class="card-text">{{course.language}}</p>
+    <h5 class="card-title">Description</h5>
+    <p class="card-text">{{course.description}}</p>
+    <h5 class="card-title">Last update date</h5>
+    <p class="card-text">{{course.lastUpdateDate}}</p>
+    <h5 class="card-title">Rating</h5>
+    <p class="card-text">{{course.rating}}</p>
+
+
+  </div>
+</div>

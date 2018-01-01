@@ -22,11 +22,13 @@ export class CourseDetailsComponent implements OnInit {
   course: ICourse;
 
 
-
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id')
-    console.log(id)
-    this.course = this.dataService.getCourseById(id)
+    // this.hero$ = this.route.paramMap
+    //   .switchMap((params: ParamMap) =>
+    //     this.dataService.getCourseById(params.get('id')))
+    this.route.params.subscribe(params => {
+      this.course = this.dataService.getCourseById(params['id'])
+    });
   }
 
 }

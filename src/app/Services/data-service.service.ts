@@ -17,12 +17,10 @@ export class DataServiceService {
   }
 
   getCourseById(id: string): ICourse {
-    return this.getCourses().find(x => {
-      return x.id === id
-    })
+    return this.getCourses().find(x => x.id === +id)
   }
 
-  
+
 
 }
 
