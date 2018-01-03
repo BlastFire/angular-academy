@@ -20,8 +20,6 @@ export class DataServiceService {
     return this.getCourses().find(x => x.id === +id)
   }
 
-
-
 }
 
 
