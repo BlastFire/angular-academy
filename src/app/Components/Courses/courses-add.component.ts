@@ -20,7 +20,14 @@ export class CoursesAddComponent implements OnInit {
 
   onSubmit(form: any) {
     //TODO form validation
-    this.dataService.getCourses().push(form.value)
+    // if(form.invalid) {
+    //   console.log("invalid")
+    // } else if(form.valid) {
+    //   console.log("valid")
+    // }
+    //this.dataService.getCourses().push(form.value)
+
+    console.log(form)
   }
 
 }
