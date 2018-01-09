@@ -20,6 +20,29 @@ export class DataServiceService {
     return this.getCourses().find(x => x.id === +id)
   }
 
+  saveCourse(formCourse: ICourse) {
+    const counter = this.counterfn()
+    counter.inc()
+    formCourse.id = counter.getval()
+    this.getCourses().push(formCourse)
+    console.log(this.getCourses())
+  }
+
+  counterfn(): { inc, dec, getval } {
+    let counter = 2
+    let inc = (): void => {
+      counter = counter + 1
+    }
+    let dec = (): void => {
+      counter = counter - 1
+    }
+    let getval = (): number => {
+      return counter
+    }
+    return { inc, dec, getval }
+  }
+
+
 }
 
 

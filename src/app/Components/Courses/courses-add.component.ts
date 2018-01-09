@@ -19,15 +19,11 @@ export class CoursesAddComponent implements OnInit {
   course: ICourse
 
   onSubmit(form: any) {
-    //TODO form validation
-    // if(form.invalid) {
-    //   console.log("invalid")
-    // } else if(form.valid) {
-    //   console.log("valid")
-    // }
-    //this.dataService.getCourses().push(form.value)
-
-    console.log(form)
+    if (form.invalid) {
+      console.log("invalid")
+    } else if (form.valid) {
+      this.dataService.saveCourse(form.value)
+    }
   }
 
   test(readerEvt, form) {
