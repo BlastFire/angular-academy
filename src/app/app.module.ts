@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { FormsModule } from '@angular/forms'
 
+import { RatingModule } from 'ngx-rating'
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/Header/Header.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +32,7 @@ import { CoursesAddComponent } from './Components/Courses/courses-add.component'
     NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
+    RatingModule,
     AppRoutingModule
   ],
   providers: [DataServiceService],

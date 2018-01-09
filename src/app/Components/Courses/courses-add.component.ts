@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ICourse } from '../../Models/course.interface';
 import { DataServiceService } from '../../Services/data-service.service'
 
@@ -28,6 +28,19 @@ export class CoursesAddComponent implements OnInit {
     //this.dataService.getCourses().push(form.value)
 
     console.log(form)
+  }
+
+  test(readerEvt, form) {
+    let file = readerEvt.target.files[0]
+    var reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.addEventListener("load", function () {
+      // console.log(btoa(reader.result))
+      form.form.get('avatar').patchValue({
+        value: reader.result
+      })
+    }, false)
+
   }
 
 }
