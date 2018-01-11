@@ -6,7 +6,7 @@ export interface ICourse {
     teacherEmail: string,
     description: string,
     language: string,
-    image: string,
+    avatar: string,
     rating: number,
     invisible: boolean,
     creationDate: number,

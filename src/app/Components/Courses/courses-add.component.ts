@@ -26,15 +26,16 @@ export class CoursesAddComponent implements OnInit {
     }
   }
 
-  test(readerEvt, form) {
+  onFileUploadEvent(readerEvt, form) {
     let file = readerEvt.target.files[0]
     var reader = new FileReader()
     reader.readAsDataURL(file)
     reader.addEventListener("load", function () {
       // console.log(btoa(reader.result))
-      form.form.get('avatar').patchValue({
-        value: reader.result
-      })
+      // form.form.get('avatar').patchValue({
+      //   value: reader.result
+      // })
+      form.form.get('avatar').patchValue(reader.result)
     }, false)
 
   }

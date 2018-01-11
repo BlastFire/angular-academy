@@ -25,7 +25,7 @@ export class DataServiceService {
     counter.inc()
     formCourse.id = counter.getval()
     this.getCourses().push(formCourse)
-    console.log(this.getCourses())
+    // console.log(this.getCourses())
   }
 
   counterfn(): { inc, dec, getval } {
